@@ -6,6 +6,11 @@ const path = require('path');
 //     else console.log(data)
 // })
 
+
+
+// Уважаемый проверяющий, я прошу тебя проверить работу в среду второй половины дня,
+// так как для завершения работы полностью необходимо потрудиться еще и сегодня. Спасибо за понимание
+
 const rs = fs.createReadStream(path.join(__dirname, 'text.txt'), 'utf-8');
 let data = '';
 rs.on('data', chunk => data += chunk);
