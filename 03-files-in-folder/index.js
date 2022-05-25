@@ -10,7 +10,7 @@ async function showDirInfo(){
     filteredDir.forEach((element, i) => {
         fs.stat(path.join(__dirname, `secret-folder`, element.name), (err, stats) => {
             err ? console.log(err.message) : 
-            console.log(`${info[0]} - ${stats.size} bytes`)
+            console.log(`${info[i]} - ${stats.size} bytes`)
         })    
     })
     filteredDir.forEach((element) => {
@@ -18,7 +18,6 @@ async function showDirInfo(){
         let ext = path.extname(element.name).toString().slice(1)
         info.push(`${name} - ${ext}`)     
     })
-    console.log(info)
 }
 
 showDirInfo()
